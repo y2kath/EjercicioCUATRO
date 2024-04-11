@@ -4,13 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EJERCICIO 4</title>
+    <script src="ej4.js"></script>
 </head>
-<body>
-    <header>
-        <h1>EJERCICIO 4</h1>
-    </header>
-    <section>
-        <h2>no</h2>
-    </section>
+
+<body class="cuerpo-ej4">
+    <div class="container">
+        <label for="final">
+            <h1>Calificación final</h1>
+        </label>
+        <br>
+
+        <div>
+            <h3>
+                Ingresa tu calificación del primer parcial
+            </h3>
+            <input class="button" 
+            type="text" 
+            id="parcial1" 
+            name="parcial1"
+            placeholder="Calificación">
+        </div>
+
+        <div>
+            <h3>
+                Ingresa tu calificación del segundo parcial
+            </h3>
+            <input class="button" 
+            type="text" 
+            id="parcial2" 
+            name="parcial2"
+            placeholder="Calificación">
+        </div>
+
+        <div>
+            <h3>
+                Ingresa tu calificación del tercer parcial
+            </h3>
+            <input class="button" 
+            type="text" 
+            id="parcial3" 
+            name="parcial3"
+            placeholder="Calificación">
+        </div>
+       
+        <div>
+            <h3>
+                Ingresa tu calificación del examen final
+            </h3>
+            <input class="button" 
+            type="text" 
+            id="ex" 
+            name="ex"
+            placeholder="Calificación del examen">
+        </div>
+
+        <div>
+            <h3>
+                Ingresa tu calificación del trabajo final
+            </h3>
+            <input class="button" 
+            type="text" 
+            id="pr" 
+            name="pr"
+            placeholder="Calificación del proyecto final">
+        </div>
+
+        <button class="button" 
+        type="button" onclick="calificacion()" 
+        id="button" name="button">
+            Calcular
+        </button>
+        <br>
+
+        <div class="content">
+        <span  id="tp"></span>
+        <span  id="te"></span>
+        <span  id="tpr"></span>
+        <span id="final"></span>
+    </div>
+    </div>
 </body>
+
 </html>
