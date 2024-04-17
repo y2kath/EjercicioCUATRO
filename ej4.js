@@ -1,18 +1,18 @@
-function calificacion()
-{
-    var parcial1 = parseFloat(document.getElementById("parcial1").value);  
+function calcularCalificacionFinal() {
+    var parcial1 = parseFloat(document.getElementById("parcial1").value);
     var parcial2 = parseFloat(document.getElementById("parcial2").value);
     var parcial3 = parseFloat(document.getElementById("parcial3").value);
-    var ex = parseFloat(document.getElementById("ex").value);
-    var pr = parseFloat(document.getElementById("pr").value);
-    var sp = parcial1 + parcial2 + parcial3 
-    var tp=(sp*55)/30
-    var te=(ex*30)/10
-    var tpr = (pr*15)/10
-    var final = tpr + te + tp
-
-    document.getElementById("sp").innerHTML = "el valor de tus 3 parciales es: " + tp;
-    document.getElementById("ex").innerHTML = "el valor de tu examen es: " + te;
-    document.getElementById("pr").innerHTML = "el valor de tu proyecto es: " + tpr;
-    document.getElementById("final").innerHTML = "tu calificacion final es: " + final;
-}
+    var examen = parseFloat(document.getElementById("examen").value);
+    var trabajo = parseFloat(document.getElementById("trabajo").value);
+  
+    if (isNaN(parcial1) || isNaN(parcial2) || isNaN(parcial3) || isNaN(examen) || isNaN(trabajo)) {
+      document.getElementById("resultado").innerHTML = "Por favor ingresa todas las calificaciones.";
+      return;
+    }
+  
+    var promedioParciales = (parcial1 + parcial2 + parcial3) / 3;
+    var calificacionFinal = (promedioParciales * 0.55) + (examen * 0.30) + (trabajo * 0.15);
+  
+    document.getElementById("resultado").innerHTML = "Tu calificación final es: " + calificacionFinal.toFixed(2);
+  }
+  
