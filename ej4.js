@@ -5,8 +5,8 @@ function calificacion()
     var parcial3 = parseFloat(document.getElementById("parcial3").value);
     var ex = parseFloat(document.getElementById("ex").value);
     var pr = parseFloat(document.getElementById("pr").value);
-    var sp=parcial1 + parcial2 + parcial3 
-    var tp=(sp*55) / 30
+    var sp = parcial1 + parcial2 + parcial3 
+    var tp=(sp*55)/30
     var te=(ex*30)/10
     var tpr = (pr*15)/10
     var final = tpr + te + tp
